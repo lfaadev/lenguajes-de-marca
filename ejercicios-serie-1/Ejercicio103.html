@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Transparencia con CSS</title>
+</head>
+<body>
+
+    <h3>He aquí un ejemplo de como crear una caja con texto opaco y fondo transparente!</h3>
+
+    <div style="background-color: orange; padding: 20px; width: 100%; height: 500px;">
+
+        <div style="background-color: #ffcc80; 
+                    color: blue; 
+                    width: 300px; 
+                    padding: 15px; 
+                    margin-bottom: 20px; 
+                    opacity: 0.6;">
+            Aquí el texto en color azul tiene la misma transparencia
+            que el fondo, casi imposible de separar!!!
+        </div>
+
+        <div style="background-color: rgba(255, 255, 255, 0.5); 
+                    color: blue; 
+                    width: 300px; 
+                    padding: 15px; 
+                    margin-bottom: 20px;">
+            Esto es el texto bien bien opaco en color azul con fondo blanco
+            semi-trasparente!!!
+        </div>
+
+        <div style="background-color: white; 
+                    color: blue; 
+                    width: 300px; 
+                    padding: 15px;">
+            Esto es el texto bien bien opaco en color azul con fondo blanco
+            bien bien opaco!!!
+        </div>
+
+    </div>
+
+</body>
+</html>

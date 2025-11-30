@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 95 - Multimedia</title>
+</head>
+<body style="font-family: serif; margin: 20px;">
+
+    <h2 style="font-family: serif;">Tarea Opcional 3 Modulo 2</h2>
+
+    <p style="font-size: 0.9em;">
+        Realiza una página que utilice imágenes responsive con la etiqueta picture, que contenga un video de YouTube y archivos de imagen vectorial SVG.
+    </p>
+
+    <h3 style="font-family: serif;">Etiqueta &lt;Picture&gt;</h3>
+
+    <picture>
+        <source media="(min-width: 650px)" srcset="https://upload.wikimedia.org/wikipedia/en/7/75/Shaun_the_Sheep_movie_cast.png">
+        <source media="(min-width: 465px)" srcset="https://upload.wikimedia.org/wikipedia/en/7/75/Shaun_the_Sheep_movie_cast.png">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/75/Shaun_the_Sheep_movie_cast.png" alt="Shaun the Sheep" style="width: 100%; max-width: 800px; height: auto;">
+    </picture>
+
+    <br><br>
+
+    <h3 style="font-family: serif;">Imagen Vectorial</h3>
+
+    <svg width="150" height="100" viewBox="0 0 100 100">
+        <circle cx="30" cy="30" r="25" fill="black" />
+        <circle cx="30" cy="70" r="25" fill="red" />
+        <line x1="60" y1="50" x2="90" y2="20" stroke="#4682B4" stroke-width="3" />
+        <line x1="65" y1="55" x2="95" y2="25" stroke="#4682B4" stroke-width="3" />
+        <line x1="70" y1="60" x2="100" y2="30" stroke="#4682B4" stroke-width="3" />
+        <line x1="60" y1="50" x2="90" y2="80" stroke="#4682B4" stroke-width="3" />
+        <line x1="65" y1="45" x2="95" y2="75" stroke="#4682B4" stroke-width="3" />
+    </svg>
+
+    <br><br>
+
+    <h3 style="font-family: serif;">Video de Youtube</h3>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/S2FV4q4sVnE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <br><br>
+    <hr>
+
+    <h4 style="font-family: serif;">Fin de Tarea</h4>
+    
+    <a href="#" style="text-decoration: none; color: blue;">Regreso al Menú Principal</a>
+
+</body>
+</html>

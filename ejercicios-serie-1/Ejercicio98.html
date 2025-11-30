@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 98 - HTML5 Semántico</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px; color: #333;">
+
+    <h2 style="color: #228b22; font-weight: bold;">
+        Secciones y líneas generales de un documento HTML5
+    </h2>
+
+    <p style="font-size: 0.9em; color: #666;">
+        La especificación HTML5 trae muchos nuevos elementos a los desarrolladores web, permitiéndoles describir la estructura de un documento web con semántica estandarizada. Este documento describe estos elementos y cómo usarlos para definir el perfil de cualquier documento.
+    </p>
+
+    <h2 style="color: blue;">Problemas resueltos por HTML5</h2>
+
+    <p style="font-size: 0.9em;">
+        La definición de la estructura de un documento en HTML 4 y su algoritmo de perfilado es muy tosco y genera numerosos problemas:
+    </p>
+
+    <ol style="font-size: 0.9em; line-height: 1.4em;">
+        <li>HTML5 quita la necesidad de elementos &lt;div&gt; para definir secciones semánticas sin definir valores específicos para los atributos class, introduciendo un nuevo elemento, &lt;section&gt;, el elemento de sección HTML.</li>
+        <li>Mezclar varios documentos es difícil: la inclusión de un sub-documento en un documento principal. Esto se resuelve en HTML5 con los elementos de seccionado (&lt;article&gt;, &lt;section&gt;, &lt;nav&gt; y &lt;aside&gt;) son siempre subsecciones de su sección ancestra más cercana.</li>
+        <li>HTML5 introduce el elemento &lt;hgroup&gt; que oculta todos los elementos de cabecera excepto el primero de más alto rango (<b>por ejemplo, &lt;hgroup&gt;&lt;h1&gt;Justine&lt;/h1&gt;&lt;h2&gt;Les Malheurs de la Vertu&lt;/h2&gt;&lt;/hgroup&gt; crea el perfil 1. Justine</b>).</li>
+        <li>Un documento puede tener secciones especiales conteniendo información relacionada que no es parte del flujo principal. HTML5 introduce el elemento &lt;aside&gt; permitiendo a dichas secciones no ser parte del perfil principal.</li>
+        <li>Hay información relacionada no al documento pero si al sitio entero, como logos, menús, tablas de contenidos, o información de derechos de autor y notas legales. Para ese propósito, HTML5 introduce tres elementos de sección específicos: &lt;nav&gt; para colecciones de enlaces, como una tabla de contenidos, &lt;footer&gt; y &lt;header&gt; información del sitio.</li>
+    </ol>
+
+    <p style="font-size: 0.9em;">
+        De manera más general, HTML5 trae precisión a las características de seccionado y cabecera, permitiendo a los perfiles de documento ser predecibles y usados por el navegador para mejorar la experiencia de usuario.
+    </p>
+
+    <h2 style="color: #00ced1;">El algoritmo de perfilado de HTML5</h2>
+    <h3 style="color: #32cd32;">Definiendo secciones en HTML5</h3>
+
+    <p style="font-size: 0.9em;">
+        Todo el contenido incluido dentro del elemento &lt;body&gt; es parte de una sección. Las secciones en HTML5 pueden ser anidadas. Además de la sección principal, definida por el elemento &lt;body&gt;, los límites de la sección son definidos explícita o implícitamente. Las secciones definidas explícitamente son el contenido definido en las etiquetas &lt;body&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;header&gt;, &lt;footer&gt;, y &lt;nav&gt;. Nota: Cada sección puede tener su propia jerarquía de cabeceras. Por lo tanto, incluso una sección anidada puede tener un elemento &lt;h1&gt;. Consulte también Definiendo cabeceras en HTML5.
+    </p>
+
+    <h3 style="color: #666;">Secciones</h3>
+
+    <table width="100%" cellspacing="0" cellpadding="8" border="0" style="font-size: 0.9em; border-collapse: collapse;">
+        <tr style="background-color: #f0f0f0; border-bottom: 2px solid #ccc;">
+            <th align="left" width="150" style="color: #666;">Elemento</th>
+            <th align="left" style="color: #666;">Descripción</th>
+        </tr>
+
+        <tr style="border-bottom: 1px solid #eee;">
+            <td style="color: blue;">&lt;body&gt;</td>
+            <td>Representa el contenido principal de un documento HTML. Solo hay un elemento &lt;body&gt; en un documento.</td>
+        </tr>
+        <tr style="background-color: #fafafa; border-bottom: 1px solid #eee;">
+            <td style="color: blue;">&lt;section&gt;</td>
+            <td>Define una sección en un documento.</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #eee;">
+            <td style="color: blue;">&lt;nav&gt;</td>
+            <td>Define una sección que solamente contiene enlaces de navegación.</td>
+        </tr>
+        <tr style="background-color: #fafafa; border-bottom: 1px solid #eee;">
+            <td style="color: blue;">&lt;article&gt; <span style="background: orange; color: white; font-size: 0.7em; padding: 1px 3px; border-radius: 2px;">5</span></td>
+            <td>Define contenido autónomo que podría existir independientemente del resto del contenido.</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #eee;">
+            <td style="color: blue;">&lt;aside&gt; <span style="background: orange; color: white; font-size: 0.7em; padding: 1px 3px; border-radius: 2px;">5</span></td>
+            <td>Define algunos contenidos vagamente relacionados con el resto del contenido de la página. Si es removido, el contenido restante seguirá teniendo sentido.</td>
+        </tr>
+        <tr style="background-color: #fafafa; border-bottom: 1px solid #eee;">
+            <td style="color: blue;">&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,<br>&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;</td>
+            <td>Los elemento de cabecera implementan seis niveles de cabeceras de documentos; &lt;h1&gt; es la de mayor y &lt;h6&gt; es la de menor impotancia. Un elemento de cabecera describe brevemente el tema de la sección que introduce.</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #eee;">
+            <td style="color: blue;">&lt;header&gt; <span style="background: orange; color: white; font-size: 0.7em; padding: 1px 3px; border-radius: 2px;">5</span></td>
+            <td>Define la cabecera de una página o sección. Usualmente contiene un logotipo, el título del sitio Web y una tabla de navegación de contenidos.</td>
+        </tr>
+        <tr style="background-color: #fafafa; border-bottom: 1px solid #eee;">
+            <td style="color: blue;">&lt;footer&gt; <span style="background: orange; color: white; font-size: 0.7em; padding: 1px 3px; border-radius: 2px;">5</span></td>
+            <td>Define el pie de una página o sección. Usualmente contiene un mensaje de derechos de autoría, algunos enlaces a información legal o direcciones para dar información de retroalimentación.</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #eee;">
+            <td style="color: blue;">&lt;address&gt;</td>
+            <td>Define una sección que contiene información de contacto.</td>
+        </tr>
+        <tr style="background-color: #fafafa; border-bottom: 1px solid #eee;">
+            <td style="color: blue;">&lt;main&gt; <span style="background: orange; color: white; font-size: 0.7em; padding: 1px 3px; border-radius: 2px;">5</span></td>
+            <td>Define el contenido principal o importante en el documento. Solamente existe un elemento &lt;main&gt; en el documento.</td>
+        </tr>
+    </table>
+
+</body>
+</html>
